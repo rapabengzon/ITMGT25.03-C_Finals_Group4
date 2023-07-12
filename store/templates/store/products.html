@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %} 
+All My Products
+{% endblock %} 
+
+{% block css_files %}
+{% endblock %}
+
+{% block content %}
+<section id="all-products">
+  <h2>My Collected products</h2>
+
+  <ul>
+    {% include "store/product.html" %}
+    {% include "store/product.html" %}
+    {% include "store/product.html" %}
+  </ul>
+</section>
+{% endblock %}
