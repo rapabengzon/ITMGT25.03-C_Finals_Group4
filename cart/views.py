@@ -11,6 +11,10 @@ def cart_summary(request):
     cart = Cart(request)
     return render(request, 'cart/summary.html', {'cart': cart})
 
+def quotation(request):
+    cart = Cart(request)
+    return render(request, 'cart/quotation.html', {'cart': cart})
+
 def cart_add(request):
     cart = Cart(request)
     if request.POST.get('action') == 'post':

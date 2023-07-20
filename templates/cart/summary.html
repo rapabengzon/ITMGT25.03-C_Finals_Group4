@@ -53,6 +53,13 @@
       <div class="col-12 text-end">
         <div class="h6 fw-bold">Sub Total: ₱<div id="subtotal" class="d-inline-flex">{{cart.get_total_price}}</div></div>
       </div>
+      {% with total_qty=cart|length %}
+      {% if total_qty > 0 %}
+      <div class="col-12 text-end">
+        <a type="button" role="button" href="{% url "cart:cart_quotation" %}" class="btn btn-outline-secondary">Proceed to Quotation Form</a></div>
+      {% else %}
+      {% endif %}
+    {% endwith %}  
     </div>
   </main>
 

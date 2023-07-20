@@ -14,12 +14,12 @@ My Store
     <section class="py-5 text-center container">
       <div class="row py-lg-3">
         <div class="col-lg-6 col-md-8 mx-auto">
-        <img class="img-fluid" alt="Responsive image" src="{% static "store/images/test.png" %}" width=200px;height=200px>
+        <img class="img-fluid" alt="" src="{% static "store/images/test.png" %}" width=200px;height=200px>
           <h1 class="h1 fw-bold">Welcome to Paper and Pens!</h1>
           <p class="lead text-muted">Something short and leading about the collection below—its contents, the creator,
             etc. Make it short and sweet, but not too short so folks don’t simply skip over it entirely.</p>
           <p>
-            <a href="#" class="btn btn-primary my-2">Make an account</a>
+            <a href="{% url "store:login" %}" class="btn btn-primary my-2">Log in</a>
           </p>
         </div>
       </div>

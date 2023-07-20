@@ -13,6 +13,9 @@ def home(request):
     products = Product.objects.all()
     return render(request, 'index.html',{'products': products})
 
+def login(request):
+    return render(request, 'login.html')
+
 def product_detail(request, slug):
     product = get_object_or_404(Product, slug=slug, in_stock=True)
     return render(request, 'store/product.html', {'product': product})
