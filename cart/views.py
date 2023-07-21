@@ -11,6 +11,9 @@ def cart_summary(request):
     cart = Cart(request)
     return render(request, 'cart/summary.html', {'cart': cart})
 
+def submit(request):
+    return render(request, 'cart/submit.html')
+
 def quotation(request):
     cart = Cart(request)
     return render(request, 'cart/quotation.html', {'cart': cart})
