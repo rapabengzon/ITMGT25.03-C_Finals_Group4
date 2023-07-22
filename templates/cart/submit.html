@@ -1,1 +1,28 @@
-submitted!
+{% extends "base.html" %} 
+{% load static %}
+
+{% block title %} 
+Papers and Pens
+{% endblock %} 
+
+{% block css_files %}
+  <link rel="stylesheet" href="{% static "store/index.css" %}" />
+{% endblock %}
+
+{% block content %}
+<main>
+    <section class="py-5 text-center container">
+      <div class="row py-lg-3">
+        <div class="col-lg-6 col-md-8 mx-auto">
+        <img class="img-fluid" alt="" src="{% static "store/images/store_logo.png" %}" width=180px;height=180px>
+          <h1 class="h1 fw-bold">Quotation Submitted!</h1>
+          <p class="lead text-muted">Expect an email from us regarding an update soon. Thank you!</p>
+          <p>
+            <a href="/" class="btn btn-primary my-2">Back to Home</a>
+          </p>
+          </p>
+        </div>
+      </div>
+    </section>
+
+    {% endblock %}

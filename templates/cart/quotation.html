@@ -7,7 +7,7 @@
 <div class="container">
     <main>
       <div class="py-5 text-center">
-        <img class="d-block mx-auto mb-4" src="{% static "store/images/test.png" %}" alt="" width=100px;height=100px>
+        <img class="d-block mx-auto mb-4" src="{% static "store/images/store_logo.png" %}" alt="" width=150px;height=150px>
         <h2>Quotation Form</h2>
       </div>
   
@@ -189,7 +189,7 @@
             </div>
             <hr class="my-4">
           <a>
-            <button class="w-100 btn btn-primary btn-lg" type="submit" href="{% url "cart:cart_quotation" %}">Submit quotation</button>
+            <a class="w-100 btn btn-primary btn-lg" type="submit" href="{% url "cart:cart_submit" %}">Submit quotation</a>
           </a>
         </form>
         </div>

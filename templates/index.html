@@ -2,7 +2,7 @@
 {% load static %}
 
 {% block title %} 
-My Store
+Papers and Pens
 {% endblock %} 
 
 {% block css_files %}
@@ -14,12 +14,13 @@ My Store
     <section class="py-5 text-center container">
       <div class="row py-lg-3">
         <div class="col-lg-6 col-md-8 mx-auto">
-        <img class="img-fluid" alt="" src="{% static "store/images/test.png" %}" width=200px;height=200px>
-          <h1 class="h1 fw-bold">Welcome to Paper and Pens!</h1>
-          <p class="lead text-muted">Something short and leading about the collection below—its contents, the creator,
-            etc. Make it short and sweet, but not too short so folks don’t simply skip over it entirely.</p>
+        <img class="img-fluid" alt="" src="{% static "store/images/store_logo.png" %}" width=250px;height=250px>
+          <h1 class="h1 fw-bold">Welcome to Papers and Pens!</h1>
+          <p class="lead text-muted">Papers and Pens is the store for all your paper, writing, and filing needs! Browse through all our quality and affordable products with just a few clicks.</p>
+          <p class="font-weight-bold"><b>WANDA<u>VISION</u></b></p>
+          <p class="lead text-muted">Whether you’re a writer, office worker, or everyday hero, our products will definitely make you reach unimaginable heights! </p>
           <p>
-            <a href="{% url "account:register" %}" class="btn btn-primary my-2">Your account</a>
+            <a href="{% url "account:register" %}" class="btn btn-primary my-2">Register</a>
           </p>
         </div>
       </div>

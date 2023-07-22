@@ -19,7 +19,7 @@
   <header data-bs-theme="dark">
     <nav class="navbar navbar-expand-md navbar-dark bg-dark mb-4">
       <div class="container-fluid">
-        <a class="navbar-brand" href="/">ITM Finals</a>
+        <img class="img-fluid" alt="" src="{% static "store/images/store_logo_alt.png" %}" href="/" height = 120px; width=120px>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
           aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
@@ -35,7 +35,7 @@
                 Product Types
               </a>
               <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <li><a class="dropdown-item" href="/">All</a></li>
+                <li><a class="dropdown-item" href="/all-products">All</a></li>
                 {% for c in categories %}
                 <li {% if category.slug == c.slug %}class="selected" {% endif %}>
                   <a class="dropdown-item" href="{{ c.get_absolute_url }}">{{ c.name|title }}</a>
@@ -119,49 +119,33 @@
     <hr>
     <div class="row pt-4">
         <div class="col-12 col-md">
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                class="bi bi-asterisk" viewBox="0 0 16 16">
+          <img class="img-fluid" alt="" src="{% static "store/images/store_logo.png" %}" width=100px;height=100px viewBox="0 0 16 16">
                 <path
                     d="M8 0a1 1 0 0 1 1 1v5.268l4.562-2.634a1 1 0 1 1 1 1.732L10 8l4.562 2.634a1 1 0 1 1-1 1.732L9 9.732V15a1 1 0 1 1-2 0V9.732l-4.562 2.634a1 1 0 1 1-1-1.732L6 8 1.438 5.366a1 1 0 0 1 1-1.732L7 6.268V1a1 1 0 0 1 1-1z" />
             </svg>
-            <small class="d-block mb-3 text-muted">&copy; 2017-2021</small>
         </div>
         <div class="col-6 col-md fs15">
-            <h5>Features</h5>
+            <h5>Filing Supplies</h5>
             <ul class="list-unstyled">
-                <li><a class="link-secondary text-decoration-none" href="#">Cool stuff</a></li>
-                <li><a class="link-secondary text-decoration-none" href="#">Random feature</a></li>
-                <li><a class="link-secondary text-decoration-none" href="#">Team feature</a></li>
-                <li><a class="link-secondary text-decoration-none" href="#">Stuff for developers</a></li>
-                <li><a class="link-secondary text-decoration-none" href="#">Another one</a></li>
-                <li><a class="link-secondary text-decoration-none" href="#">Last time</a></li>
+              <li><a class="link-secondary text-decoration-none" href="/shop/filing-supplies">View Products</a></li>
             </ul>
         </div>
         <div class="col-6 col-md fs15">
-            <h5>Resources</h5>
+            <h5>Paper Supplies</h5>
             <ul class="list-unstyled">
-                <li><a class="link-secondary text-decoration-none" href="#">Resource name</a></li>
-                <li><a class="link-secondary text-decoration-none" href="#">Resource</a></li>
-                <li><a class="link-secondary text-decoration-none" href="#">Another resource</a></li>
-                <li><a class="link-secondary text-decoration-none" href="#">Final resource</a></li>
+                <li><a class="link-secondary text-decoration-none" href="/shop/paper-supplies">View Products</a></li>
             </ul>
         </div>
         <div class="col-6 col-md fs15">
-            <h5>Resources</h5>
+            <h5>Writing Supplies</h5>
             <ul class="list-unstyled">
-                <li><a class="link-secondary text-decoration-none" href="#">Business</a></li>
-                <li><a class="link-secondary text-decoration-none" href="#">Education</a></li>
-                <li><a class="link-secondary text-decoration-none" href="#">Government</a></li>
-                <li><a class="link-secondary text-decoration-none" href="#">Gaming</a></li>
+                <li><a class="link-secondary text-decoration-none" href="/shop/writing-supplies">View Products</a></li>
             </ul>
         </div>
         <div class="col-6 col-md">
             <h5>About</h5>
             <ul class="list-unstyled">
-                <li><a class="link-secondary text-decoration-none" href="#">Team</a></li>
-                <li><a class="link-secondary text-decoration-none" href="#">Locations</a></li>
-                <li><a class="link-secondary text-decoration-none" href="#">Privacy</a></li>
-                <li><a class="link-secondary text-decoration-none" href="#">Terms</a></li>
+                <li><a class="link-secondary text-decoration-none" href="/about">Paper and Pens</a></li>
             </ul>
         </div>
     </div>

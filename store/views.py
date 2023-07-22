@@ -13,6 +13,13 @@ def home(request):
     products = Product.objects.all()
     return render(request, 'index.html',{'products': products})
 
+def all(request):
+    products = Product.objects.all()
+    return render(request, 'all.html',{'products': products})
+
+def about(request):
+    return render(request, 'about.html')
+
 def login(request):
     return render(request, 'login.html')
 
