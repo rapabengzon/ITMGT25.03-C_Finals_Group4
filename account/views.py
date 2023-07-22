@@ -35,8 +35,7 @@ def account_register(request):
                 'uid': urlsafe_base64_encode(force_bytes(user.pk)),
                 'token': account_activation_token.make_token(user),
             })
-            # user.email_user(subject=subject, message=message)
-            return HttpResponse('registered succesfully and activation sent')
+            return redirect('account:dashboard')
     else:
         registerForm = RegistrationForm()
     return render(request, 'account/registration/register.html', {'form': registerForm})
@@ -57,10 +56,8 @@ def account_activate(request, uidb64, token):
     
 @login_required
 def dashboard(request):
-    # orders = user_orders(request)
     return render(request,
                   'account/user/dashboard.html',)
-                #   {'section': 'profile', 'orders': orders})
 
 @login_required
 def edit_details(request):
